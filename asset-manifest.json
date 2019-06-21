@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio_react/static/css/main.88a6ddc8.chunk.css",
+    "main.js": "/portfolio_react/static/js/main.9c0236cf.chunk.js",
+    "main.js.map": "/portfolio_react/static/js/main.9c0236cf.chunk.js.map",
+    "runtime~main.js": "/portfolio_react/static/js/runtime~main.269d08db.js",
+    "runtime~main.js.map": "/portfolio_react/static/js/runtime~main.269d08db.js.map",
+    "static/js/2.e051d0f8.chunk.js": "/portfolio_react/static/js/2.e051d0f8.chunk.js",
+    "static/js/2.e051d0f8.chunk.js.map": "/portfolio_react/static/js/2.e051d0f8.chunk.js.map",
+    "index.html": "/portfolio_react/index.html",
+    "precache-manifest.a7236987551714cba846c7b6ab5505c4.js": "/portfolio_react/precache-manifest.a7236987551714cba846c7b6ab5505c4.js",
+    "service-worker.js": "/portfolio_react/service-worker.js",
+    "static/css/main.88a6ddc8.chunk.css.map": "/portfolio_react/static/css/main.88a6ddc8.chunk.css.map",
+    "static/media/artificial_intelligence.png": "/portfolio_react/static/media/artificial_intelligence.cb241707.png",
+    "static/media/personal.jpg": "/portfolio_react/static/media/personal.f54e0fb3.jpg",
+    "static/media/react.png": "/portfolio_react/static/media/react.f1c89048.png",
+    "static/media/webservice.jpg": "/portfolio_react/static/media/webservice.75afe44f.jpg",
+    "static/media/xadrez.jpg": "/portfolio_react/static/media/xadrez.d5417a2c.jpg"
+  }
+}
