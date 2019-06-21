@@ -1,0 +1,17 @@
+textarea {
+    width: 100%;
+    line-height: 40px;
+    border: none;
+    padding: 0 20px;
+    height: 100px;
+    resize: none;
+    border: 1px solid #ccc;
+}
+
+.form-group.col-mde-12 {
+    width: 100%;
+}
+
+.btn-primary{
+    float: right;
+}
