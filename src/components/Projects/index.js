@@ -61,7 +61,7 @@ const Projects = props => {
           </div>
 
           <div className="more_btn">
-            <a className="main_btn" href="#">
+            <a className="main_btn" href="https://github.com/igorgabrig?tab=repositories" target="_blank">
               + Veja Mais
             </a>
           </div>
