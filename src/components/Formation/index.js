@@ -1,9 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
+import api from "../../services/api";
+
 import './style.css';
 
-const Formation = props => {
-  return (
-    <>
+
+
+
+
+export default class Formation extends Component {
+  state = {
+    expirience: [],
+    error: ""
+  };
+  
+  componentDidMount() {
+      this.getExp();
+  }
+
+
+  getExp = async () => {
+    try {
+      const response = await api.get("/experience");
+      this.setState({ expirience: response.data });
+    } catch (error) {}
+  };
+
+  render(){
+    const { expirience } = this.state;
+
+    return (
+     <>
       <section id="Formation" className="mytabs_area p_120">
         <div className="container">
           <div className="tabs_inner">
@@ -43,66 +69,22 @@ const Formation = props => {
                 aria-labelledby="home-tab"
               >
                 <ul className="list">
+                {expirience.map(exp => {
+                  return(
                   <li>
                     <span />
                     <div className="media">
                       <div className="d-flex">
-                        <p>2015</p>
+                        <p>{exp.year}</p>
                       </div>
                       <div className="media-body">
-                        <h4>NPI Brasil</h4>
-                        <p>
-                          Estágiario em Web Developer <br />
-                          São Pedro da Aldeia, Rio de Janeiro
-                        </p>
+                        <h4>{exp.company}</h4>
+                        <p>{exp.details}</p>
                       </div>
                     </div>
-                  </li>
-                  <li>
-                    <span />
-                    <div className="media">
-                      <div className="d-flex">
-                        <p>2016</p>
-                      </div>
-                      <div className="media-body">
-                        <h4>NPI Brasil</h4>
-                        <p>
-                          Junior Web Developer <br />
-                          São Pedro da Aldeia, Rio de Janeiro
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <span />
-                    <div className="media">
-                      <div className="d-flex">
-                        <p>2017</p>
-                      </div>
-                      <div className="media-body">
-                        <h4>DACOMP</h4>
-                        <p>
-                          Diretor Acadêmico<br />
-                          UTFPR, Cornélio Procópio - PR
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <span />
-                    <div className="media">
-                      <div className="d-flex">
-                        <p>2019</p>
-                      </div>
-                      <div className="media-body">
-                        <h4>Ramo Estudantil IEEE</h4>
-                        <p>
-                          Vice-Presidente<br />
-                          UTFPR, Cornélio Procópio - PR
-                        </p>
-                      </div>
-                    </div>
-                  </li>
+                  </li> 
+                  ); 
+                })}                
                 </ul>
               </div>
 
@@ -169,7 +151,7 @@ const Formation = props => {
         </div>
       </section>
     </>
-  );
+   
+    );
+  }
 };
-
-export default Formation;

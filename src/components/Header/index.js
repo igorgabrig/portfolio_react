@@ -1,11 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import "./style.css";
 
-const Header = props => {
-  return (
-    <>
+export default class Header extends Component {
+
+  componentDidMount() {
+
+  }
+
+  getApiProduct = async () => {
+    
+  }
+  render() {
+    return (
+      <>
       {/*================Header Menu Area =================*/}
       <header className="header_area">
         <div className="main_menu">
@@ -74,7 +83,6 @@ const Header = props => {
       
       {/*================Header Menu Area =================*/}
     </>
-  );
-};
-
-export default Header;
+    )
+  }
+}

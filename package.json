@@ -5,7 +5,10 @@
   "homepage": "https://igorgabrig.github.io/portfolio_react/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
     "gh-pages": "^2.0.1",
+    "mongoose": "^5.6.1",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
@@ -19,7 +22,8 @@
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "nodemon src/app.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "main": "index.js",
+  "repository": "https://github.com/igorgabrig/portfolio_react.git",
+  "author": "Igor Gabrig <igor_gabrig@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

@@ -5,26 +5,16 @@ import "./style.css";
 
 export default class Perfil extends Component {
   state = {
-    photo: null,
     minibio: {},
+    
     error: ""
   };
 
   componentDidMount() {
     this.getAbout();
-    this.getMinBio();
   }
 
   getAbout = async () => {
-    try {
-      const response = await api.get("/about");
-      this.setState({ photo: response.data[0].img });
-
-      console.log(response.data);
-    } catch (error) {}
-  };
-
-  getMinBio = async () => {
     try {
       const response = await api.get("/minbio");
       this.setState({ minibio: response.data[0] });
@@ -32,24 +22,17 @@ export default class Perfil extends Component {
   };
 
   render() {
-    const { photo } = this.state;
     const { minibio } = this.state;
+    console.log(minibio);
     return (
       <>
-        {/*================Home Banner Area =================*/}
         <section id="Home" className="home_banner_area">
           <div className="container box_1620">
             <div className="banner_inner d-flex align-items-center">
               <div className="banner_content">
                 <div className="media">
                   <div className="d-flex">
-                    {photo && (
-                      <img
-                        src={require(`../../img/${photo}`)}
-                        alt="foto de perfil"
-                        width="500px"
-                      />
-                    )}
+                    <img src={require("../../img/personal.jpg")} width="500" />
                   </div>
                   <div className="media-body">
                     <div className="personal_text">
@@ -101,7 +84,7 @@ export default class Perfil extends Component {
                         </li>
                       </ul>
                       <a
-                        href={minibio.cv}
+                        href="https://drive.google.com/file/d/1_9hiHFHgJXbq7u8zmY6LfUBaIVg49uCS/view?usp=sharing"
                         class="genric-btn info circle"
                         target="_blank"
                       >
